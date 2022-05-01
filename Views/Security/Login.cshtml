@@ -1,0 +1,52 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PC2_Views</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PC2_Views.styles.css" asp-append-version="true" />
+</head>
+<body>
+<div class="row">
+
+    <div class="d-lg-flex justify-content-center position-absolute top-50 start-50 translate-middle">
+
+        <div class=" p-md-5 col-lg-5">
+
+            <div class="d-flex">
+                <div class="w-100">
+                    <h3 class="mb-4">Welcome</h3>
+                </div>
+
+            </div>
+            <form class="login-form switch-form" id="loginForm" method="post" action="@Url.Action("Validate","Security")">
+                <div class="form-group mb-3">
+                    <label class="label">Username</label> <input class="form-control" placeholder="Username" required="" name="username" id="txtUsername">
+
+                </div>
+                <div class="form-group mb-3">
+                    <label class="label">Password</label> <input type="password" class="form-control" placeholder="Password" required="" name="password" id="txtPassword">
+
+
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="btnSubmit" class="form-control btn btn-primary">
+                        Login
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>

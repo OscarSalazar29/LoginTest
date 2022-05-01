@@ -1,0 +1,39 @@
+﻿@using static PC2_Views.Areas.Sales.Controllers.CustomerController
+@{
+
+    Layout = "_Layout";
+
+}
+@model IEnumerable<Customer> 
+
+
+<h3 class="mb-3">Información de clientes - Sales</h3>
+<table id="customerTable" class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Country</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CustomerID</td>
+                <td>@item.FullName</td>
+                <td>@item.Email</td>
+                <td>@item.Country</td>
+                <td>@item.Phone</td>
+            </tr>
+       
+
+        }
+
+    </tbody>
+
+</table>
+
+    
